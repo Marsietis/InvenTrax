@@ -11,7 +11,7 @@ namespace InvenTrax1
         public AddItem(string location)
         {
             InitializeComponent();
-            this._location = location;
+            _location = location;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -19,7 +19,7 @@ namespace InvenTrax1
             string itemName = textBox1.Text;
             string itemId = textBox2.Text;
             string itemPrice = textBox3.Text;
-            string itemProperties = richTextBox1.Text;
+            string itemProperties = richTextBox1.Text.Replace(',', ';');
 
             string row = $"{_location},{itemName},{itemId},{itemPrice},{itemProperties}";
 
@@ -30,7 +30,7 @@ namespace InvenTrax1
                 writer.WriteLine(row);
             }
 
-            MessageBox.Show(@"Item data saved to CSV file!");
+            MessageBox.Show(@"Items added");
             Close();
         }
 

@@ -69,6 +69,7 @@ namespace InvenTrax1
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(602, 185);
+            this.richTextBox1.Multiline = false;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(739, 464);
             this.richTextBox1.TabIndex = 3;

@@ -39,18 +39,19 @@ namespace InvenTrax1
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Location = new System.Drawing.Point(81, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 49);
+            this.label1.Size = new System.Drawing.Size(405, 109);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hello, Admin";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(68, 120);
+            this.button1.Location = new System.Drawing.Point(81, 239);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 98);
+            this.button1.Size = new System.Drawing.Size(376, 174);
             this.button1.TabIndex = 1;
             this.button1.Text = "Create a new login";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,9 +59,9 @@ namespace InvenTrax1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(228, 23);
+            this.button2.Location = new System.Drawing.Point(581, 53);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 59);
+            this.button2.Size = new System.Drawing.Size(286, 90);
             this.button2.TabIndex = 2;
             this.button2.Text = "SIGN OUT";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,9 +69,9 @@ namespace InvenTrax1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(68, 256);
+            this.button3.Location = new System.Drawing.Point(513, 239);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 98);
+            this.button3.Size = new System.Drawing.Size(376, 174);
             this.button3.TabIndex = 3;
             this.button3.Text = "Remove a login";
             this.button3.UseVisualStyleBackColor = true;
