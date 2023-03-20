@@ -70,8 +70,32 @@
         <Compile Include="InvenTrax.Designer.cs">
             <DependentUpon>InvenTrax.cs</DependentUpon>
         </Compile>
+        <Compile Include="InvenTraxUser.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="InvenTraxUser.Designer.cs">
+            <DependentUpon>InvenTraxUser.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LocalRegistration.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LocalRegistration.Designer.cs">
+            <DependentUpon>LocalRegistration.cs</DependentUpon>
+        </Compile>
+        <Compile Include="LocalRemove.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="LocalRemove.Designer.cs">
+            <DependentUpon>LocalRemove.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Quantity.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Quantity.Designer.cs">
+            <DependentUpon>Quantity.cs</DependentUpon>
+        </Compile>
         <Compile Include="Register.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -108,6 +132,15 @@
         <EmbeddedResource Include="InvenTrax.resx">
             <DependentUpon>InvenTrax.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="InvenTraxUser.resx">
+            <DependentUpon>InvenTraxUser.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LocalRegistration.resx">
+            <DependentUpon>LocalRegistration.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="LocalRemove.resx">
+            <DependentUpon>LocalRemove.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +150,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Quantity.resx">
+            <DependentUpon>Quantity.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Register.resx">
             <DependentUpon>Register.cs</DependentUpon>
         </EmbeddedResource>

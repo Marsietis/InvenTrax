@@ -20,8 +20,9 @@ namespace InvenTrax1
             string itemId = textBox2.Text;
             string itemPrice = textBox3.Text;
             string itemProperties = richTextBox1.Text.Replace(',', ';');
+            int itemQuantity = Convert.ToInt32(textBox4.Text);
 
-            string row = $"{_location},{itemName},{itemId},{itemPrice},{itemProperties}";
+            string row = $"{_location},{itemName},{itemId},{itemPrice},{itemProperties},{itemQuantity}";
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
 

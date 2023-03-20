@@ -43,6 +43,8 @@ namespace InvenTrax1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -71,13 +73,13 @@ namespace InvenTrax1
             this.richTextBox1.Location = new System.Drawing.Point(602, 185);
             this.richTextBox1.Multiline = false;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(739, 464);
+            this.richTextBox1.Size = new System.Drawing.Size(739, 176);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(105, 573);
+            this.button1.Location = new System.Drawing.Point(105, 696);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 86);
             this.button1.TabIndex = 4;
@@ -136,7 +138,7 @@ namespace InvenTrax1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 573);
+            this.button2.Location = new System.Drawing.Point(300, 696);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 86);
             this.button2.TabIndex = 11;
@@ -144,12 +146,29 @@ namespace InvenTrax1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(105, 583);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(281, 38);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(105, 526);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(281, 54);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Quantity:";
+            // 
             // AddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1452, 870);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -167,6 +186,9 @@ namespace InvenTrax1
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label7;
 
         private System.Windows.Forms.Button button2;
 

@@ -33,11 +33,19 @@ namespace InvenTrax1
                     Hide();
                 }
 
-                else if (values[0] != "admin" && values[1] == Username.Text && values[2] == Password.Text)
+                else if (values[0] == "local" && values[1] == Username.Text && values[2] == Password.Text)
                 {
                     login = true;
                     InvenTrax invenTrax = new InvenTrax(values[3]);
                     invenTrax.Show();
+                    Hide();
+                }
+
+                else if (values[0] == "user" && values[1] == Username.Text && values[2] == Password.Text)
+                {
+                    login = true;
+                    InvenTraxUser user = new InvenTraxUser(values[3]);
+                    user.Show();
                     Hide();
                 }
             }

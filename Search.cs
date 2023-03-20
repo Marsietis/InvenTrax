@@ -30,7 +30,9 @@ namespace InvenTrax1
                 string id = items[2];
                 string price = items[3];
                 string properties = items[4];
-                string row = $"Name: {name}, ID: {id}, Price: {price} Eur, Properties: {properties}";
+                string quantity = items[5];
+                string row =
+                    $"Name: {name}, ID: {id}, Price: {price} Eur, Properties: {properties}, Quantity: {quantity}";
                 if (location == _location && searchName == name || searchId == id)
                 {
                     foundItem = true;

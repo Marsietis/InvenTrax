@@ -1,7 +1,9 @@
-location,Name,894651,299,doesstuff
-location,Name0,784511,541,waterproof0
-location11,Name1,784511,541,waterproof1
-location,Test,69,420,Waterproof
-location,Test1,420,69,Waterproof
-location,Test2,42069,420,Waterproof
-location,Test3,564,54,terq;qeqwe ; qewq; qrwqeq
+location,Name,894651,299,doesstuff,5
+location,Name0,784511,541,waterproof0,1
+location11,Name1,784511,541,waterproof1,3
+location,Test,69,420,Waterproof,4
+location,Test1,420,69,Waterproof,0
+location,Test2,42069,420,Waterproof,7
+location,Test3,564,54,terq;qeqwe ; qewq; qrwqeq,8
+DefaultLocation,laptop,123,999,does stuff; big battery,3
+DefaultLocation,Phone,1234,999,Property1; Property2; Property3,4

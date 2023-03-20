@@ -37,6 +37,8 @@ namespace InvenTrax1
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -87,21 +89,44 @@ namespace InvenTrax1
             this.button5.TabIndex = 4;
             this.button5.Text = "Change items quantity";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(141, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(654, 109);
+            this.label1.Size = new System.Drawing.Size(1583, 109);
             this.label1.TabIndex = 5;
             this.label1.Text = "label1";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(997, 331);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(377, 225);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Add new location login";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(997, 606);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(377, 225);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Remove location login";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // InvenTrax
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1888, 992);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -113,6 +138,10 @@ namespace InvenTrax1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button7;
+
+        private System.Windows.Forms.Button button6;
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
