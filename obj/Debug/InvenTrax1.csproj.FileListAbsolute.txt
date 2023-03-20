@@ -36,3 +36,5 @@ E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.LocalRegistration.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.LocalRemove.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.InvenTraxUser.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.Quantity.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.RemoveItem.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.EditItem.resources

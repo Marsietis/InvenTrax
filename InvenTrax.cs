@@ -87,5 +87,17 @@ namespace InvenTrax1
             Quantity quantity = new Quantity(_location);
             quantity.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RemoveItem removeitem = new RemoveItem(_location);
+            removeitem.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            EditItem edit = new EditItem(_location);
+            edit.Show();
+        }
     }
 }

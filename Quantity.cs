@@ -7,12 +7,14 @@ namespace InvenTrax1
 {
     public partial class Quantity : Form
     {
+        private readonly string _filePath;
         private readonly string _location;
 
         public Quantity(string location)
         {
-            _location = location;
             InitializeComponent();
+            _location = location;
+            _filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,8 +31,7 @@ namespace InvenTrax1
         private void button2_Click(object sender, EventArgs e)
         {
             string searchId = textBox1.Text;
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(_filePath);
             foreach (string line in lines)
             {
                 string[] items = line.Split(',');
@@ -40,19 +41,17 @@ namespace InvenTrax1
                 if (location == _location && searchId == id)
                 {
                     label2.Text = $@"Item found. Quantity: {quantity}";
-                }
-                else
-                {
-                    label2.Text = @"Item not found";
+                    return;
                 }
             }
+
+            label2.Text = @"Item not found";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             string searchId = textBox1.Text;
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(_filePath);
             List<string> updatedLines = new List<string>();
             foreach (string line in lines)
             {
@@ -74,14 +73,13 @@ namespace InvenTrax1
                 updatedLines.Add(string.Join(",", items));
             }
 
-            File.WriteAllLines(filePath, updatedLines.ToArray());
+            File.WriteAllLines(_filePath, updatedLines.ToArray());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             string searchId = textBox1.Text;
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(_filePath);
             List<string> updatedLines = new List<string>();
             foreach (string line in lines)
             {
@@ -100,7 +98,7 @@ namespace InvenTrax1
                 updatedLines.Add(string.Join(",", items));
             }
 
-            File.WriteAllLines(filePath, updatedLines.ToArray());
+            File.WriteAllLines(_filePath, updatedLines.ToArray());
         }
     }
 }
