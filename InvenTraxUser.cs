@@ -1,24 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
-using System.Collections.Generic;
+
 
 namespace InvenTrax1
 {
-    public partial class InvenTrax : Form
+    public partial class InvenTraxUser : Form
     {
         private readonly string _location;
 
-        public InvenTrax(string location)
+        public InvenTraxUser(string location)
         {
-            InitializeComponent();
             _location = location;
+            InitializeComponent();
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            label1.Text = $@"Signed in as: {_location} admin";
+            label1.Text = $@"Signed in as: {_location} user";
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
             string[] lines = File.ReadAllLines(filePath);
             List<string> lowQuantityItems = new List<string>();
@@ -45,18 +46,6 @@ namespace InvenTrax1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddItem addItem = new AddItem(_location);
-            addItem.Show();
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -70,34 +59,17 @@ namespace InvenTrax1
             search.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            LocalRemove localremove = new LocalRemove();
-            localremove.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            LocalRegistration localreg = new LocalRegistration(_location);
-            localreg.Show();
+            Form1 form1 = new Form1();
+            form1.Show();
+            Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Quantity quantity = new Quantity(_location);
             quantity.Show();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            RemoveItem removeitem = new RemoveItem(_location);
-            removeitem.Show();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            EditItem edit = new EditItem(_location);
-            edit.Show();
         }
     }
 }

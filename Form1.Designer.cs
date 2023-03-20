@@ -72,10 +72,10 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(844, 487);
+            this.button1.Location = new System.Drawing.Point(795, 498);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 45);
+            this.button1.Size = new System.Drawing.Size(258, 86);
             this.button1.TabIndex = 3;
             this.button1.Text = "SIGN IN";
             this.button1.UseVisualStyleBackColor = true;

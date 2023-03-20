@@ -30,3 +30,11 @@ E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.csproj.GenerateResource.cache
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.csproj.CoreCompileInputs.cache
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.exe
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.pdb
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.ShowItem.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.Search.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.LocalRegistration.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.LocalRemove.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.InvenTraxUser.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.Quantity.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.RemoveItem.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.EditItem.resources

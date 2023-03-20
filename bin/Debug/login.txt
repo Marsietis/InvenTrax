@@ -1,2 +1,3 @@
 admin admin admin admin
-local local local location
+local local local DefaultLocation
+user user user DefaultLocation
