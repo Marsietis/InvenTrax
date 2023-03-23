@@ -6,7 +6,7 @@ namespace InvenTrax1
 {
     public partial class ShowItem : Form
     {
-        private string _location;
+        private readonly string _location;
 
         public ShowItem(string location)
         {

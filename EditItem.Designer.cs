@@ -85,7 +85,7 @@ namespace InvenTrax1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(263, 803);
+            this.button2.Location = new System.Drawing.Point(85, 924);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 58);
             this.button2.TabIndex = 10;
@@ -118,7 +118,7 @@ namespace InvenTrax1
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(85, 638);
+            this.label4.Location = new System.Drawing.Point(85, 653);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(377, 51);
             this.label4.TabIndex = 15;
@@ -126,14 +126,14 @@ namespace InvenTrax1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(85, 692);
+            this.textBox3.Location = new System.Drawing.Point(85, 707);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(347, 38);
             this.textBox3.TabIndex = 14;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(494, 470);
+            this.label5.Location = new System.Drawing.Point(489, 527);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(377, 51);
             this.label5.TabIndex = 17;
@@ -141,7 +141,7 @@ namespace InvenTrax1
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(494, 530);
+            this.richTextBox1.Location = new System.Drawing.Point(489, 587);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(675, 312);
             this.richTextBox1.TabIndex = 18;
@@ -159,14 +159,14 @@ namespace InvenTrax1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(85, 783);
+            this.textBox4.Location = new System.Drawing.Point(85, 827);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 38);
             this.textBox4.TabIndex = 20;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(85, 738);
+            this.label6.Location = new System.Drawing.Point(85, 782);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(377, 42);
             this.label6.TabIndex = 21;
@@ -176,7 +176,7 @@ namespace InvenTrax1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 907);
+            this.ClientSize = new System.Drawing.Size(1887, 1161);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
