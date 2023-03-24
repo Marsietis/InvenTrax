@@ -14,46 +14,68 @@ namespace InvenTrax1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Password.Text))
+            {
+                MessageBox.Show(@"Please enter a valid username and password");
+                return;
+            }
+
             string pathLogin = Path.Combine(
                 Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
                 "login.txt");
 
-            string[] lines = File.ReadAllLines(pathLogin);
+            try
+            {
+                string[] lines = File.ReadAllLines(pathLogin);
+                if (buttonValidateLogin(lines))
+                {
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show(@"Incorrect username or password");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            bool login = false;
+        private bool buttonValidateLogin(string[] lines)
+        {
             foreach (string line in lines)
             {
                 string[] values = line.Split(' ');
 
+                if (values.Length != 4)
+                {
+                    continue;
+                }
+
                 if (values[0] == "admin" && values[1] == Username.Text && values[2] == Password.Text)
                 {
-                    login = true;
                     Admin admin = new Admin();
                     admin.Show();
-                    Hide();
+                    return true;
                 }
 
-                else if (values[0] == "local" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "local" && values[1] == Username.Text && values[2] == Password.Text)
                 {
-                    login = true;
                     InvenTrax invenTrax = new InvenTrax(values[3]);
                     invenTrax.Show();
-                    Hide();
+                    return true;
                 }
 
-                else if (values[0] == "user" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "user" && values[1] == Username.Text && values[2] == Password.Text)
                 {
-                    login = true;
                     InvenTraxUser user = new InvenTraxUser(values[3]);
                     user.Show();
-                    Hide();
+                    return true;
                 }
             }
 
-            if (login == false)
-            {
-                MessageBox.Show(@"Incorrect username or password");
-            }
+            return false;
         }
     }
 }
