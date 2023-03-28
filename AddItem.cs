@@ -26,13 +26,36 @@ namespace InvenTrax1
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
 
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            // Check if an item with the same ID already exists in the location
+            bool itemExists = false;
+            using (StreamReader reader = new StreamReader(filePath))
             {
-                writer.WriteLine(row);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] fields = line.Split(',');
+                    if (fields.Length >= 3 && fields[0] == _location && fields[2] == itemId)
+                    {
+                        itemExists = true;
+                        break;
+                    }
+                }
             }
 
-            MessageBox.Show(@"Items added");
-            Close();
+            if (itemExists)
+            {
+                MessageBox.Show(@"An item with the same ID already exists in this location.");
+            }
+            else
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLine(row);
+                }
+
+                MessageBox.Show(@"Items added");
+                Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
