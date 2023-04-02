@@ -50,16 +50,19 @@ namespace InvenTrax1
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(466, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(230, 88);
             this.button3.TabIndex = 9;
             this.button3.Text = "List all items";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(83, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(377, 64);
@@ -69,18 +72,21 @@ namespace InvenTrax1
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(83, 216);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(288, 38);
             this.textBox1.TabIndex = 7;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(85, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 88);
             this.button1.TabIndex = 6;
             this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -95,6 +101,7 @@ namespace InvenTrax1
             // 
             // label2
             // 
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
             this.label2.Location = new System.Drawing.Point(83, 390);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(377, 64);
@@ -104,12 +111,14 @@ namespace InvenTrax1
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(83, 508);
+            this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(347, 38);
             this.textBox2.TabIndex = 12;
             // 
             // label3
             // 
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(83, 454);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(377, 51);
@@ -118,6 +127,7 @@ namespace InvenTrax1
             // 
             // label4
             // 
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(83, 574);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(377, 51);
@@ -127,12 +137,14 @@ namespace InvenTrax1
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(83, 628);
+            this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(347, 38);
             this.textBox3.TabIndex = 14;
             // 
             // label5
             // 
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(487, 448);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(377, 51);
@@ -142,6 +154,7 @@ namespace InvenTrax1
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(487, 508);
+            this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(675, 312);
             this.richTextBox1.TabIndex = 18;
@@ -160,12 +173,14 @@ namespace InvenTrax1
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(83, 748);
+            this.textBox4.MaxLength = 10;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 38);
             this.textBox4.TabIndex = 20;
             // 
             // label6
             // 
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(83, 703);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(377, 42);
@@ -176,6 +191,7 @@ namespace InvenTrax1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1888, 992);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);

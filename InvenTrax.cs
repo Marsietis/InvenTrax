@@ -99,5 +99,10 @@ namespace InvenTrax1
             EditItem edit = new EditItem(_location);
             edit.Show();
         }
+
+        private void InvenTrax_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

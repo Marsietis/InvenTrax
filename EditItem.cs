@@ -26,10 +26,27 @@ namespace InvenTrax1
             item.Show();
         }
 
+        private bool CheckIfEmpty()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (CheckIfEmpty())
+            {
+                MessageBox.Show(@"Please fill in all fields");
+                return;
+            }
+
             string itemId = textBox1.Text;
+
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
 
@@ -78,6 +95,12 @@ namespace InvenTrax1
             richTextBox1.Clear();
             textBox4.Clear();
             string itemId = textBox1.Text;
+            if (itemId == "")
+            {
+                MessageBox.Show(@"Please enter an item ID");
+                return;
+            }
+
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
             string[] lines = File.ReadAllLines(filePath);
             foreach (string line in lines)

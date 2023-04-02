@@ -12,6 +12,7 @@ namespace InvenTrax1
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Password.Text))
@@ -27,9 +28,9 @@ namespace InvenTrax1
             try
             {
                 string[] lines = File.ReadAllLines(pathLogin);
-                if (buttonValidateLogin(lines))
+                if (ButtonValidateLogin(lines))
                 {
-                    Hide();
+                    Hide(); //<-------- problem is here
                 }
                 else
                 {
@@ -42,7 +43,7 @@ namespace InvenTrax1
             }
         }
 
-        private bool buttonValidateLogin(string[] lines)
+        private bool ButtonValidateLogin(string[] lines)
         {
             foreach (string line in lines)
             {

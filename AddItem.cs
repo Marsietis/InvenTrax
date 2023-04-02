@@ -14,8 +14,26 @@ namespace InvenTrax1
             _location = location;
         }
 
+        private bool CheckIfEmpty()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" ||
+                richTextBox1.Text == "")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (CheckIfEmpty())
+            {
+                MessageBox.Show(@"Please fill in all fields");
+                return;
+            }
+
             string itemName = textBox1.Text;
             string itemId = textBox2.Text;
             string itemPrice = textBox3.Text;

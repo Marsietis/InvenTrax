@@ -55,7 +55,7 @@ namespace InvenTrax1
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(349, 425);
+            this.button1.Location = new System.Drawing.Point(117, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(504, 239);
             this.button1.TabIndex = 1;
@@ -81,7 +81,7 @@ namespace InvenTrax1
             this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(916, 425);
+            this.button3.Location = new System.Drawing.Point(684, 451);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(504, 239);
             this.button3.TabIndex = 2;
@@ -92,24 +92,25 @@ namespace InvenTrax1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Pro", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Menu;
             this.label2.Location = new System.Drawing.Point(25, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(756, 192);
+            this.label2.Size = new System.Drawing.Size(797, 181);
             this.label2.TabIndex = 4;
             this.label2.Text = "InvenTrax";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(929, 224);
+            this.button4.Location = new System.Drawing.Point(1260, 451);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(345, 132);
-            this.button4.TabIndex = 5;
+            this.button4.Size = new System.Drawing.Size(504, 239);
+            this.button4.TabIndex = 4;
             this.button4.Text = "Change admin login";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -132,6 +133,7 @@ namespace InvenTrax1
             this.Name = "Admin";
             this.Text = "admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Admin_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
         }

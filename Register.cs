@@ -12,32 +12,49 @@ namespace InvenTrax1
             InitializeComponent();
         }
 
+        private bool CheckIfEmpty()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string pathLogin =
-                Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                    "login.txt");
-
-            if (!File.Exists(pathLogin))
+            if (CheckIfEmpty() == false)
             {
-                File.WriteAllText(pathLogin,
-                    $@"local {textBox1.Text} {textBox2.Text} {textBox3.Text}");
-            }
+                string pathLogin =
+                    Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
+                        "login.txt");
 
+                if (!File.Exists(pathLogin))
+                {
+                    File.WriteAllText(pathLogin,
+                        $@"local {textBox1.Text} {textBox2.Text} {textBox3.Text}");
+                }
+
+                else
+                {
+                    string[] lines = File.ReadAllLines(pathLogin);
+                    int size = lines.Length;
+                    size++;
+                    string[] newLines = new string[size];
+                    for (int i = 0; i < size - 1; i++) newLines[i] = lines[i];
+                    newLines[size - 1] = "local " + textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+                    File.WriteAllLines(pathLogin, newLines);
+                }
+
+                MessageBox.Show(@"User registered");
+
+                Close();
+            }
             else
             {
-                string[] lines = File.ReadAllLines(pathLogin);
-                int size = lines.Length;
-                size++;
-                string[] newLines = new string[size];
-                for (int i = 0; i < size - 1; i++) newLines[i] = lines[i];
-                newLines[size - 1] = "local " + textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
-                File.WriteAllLines(pathLogin, newLines);
+                MessageBox.Show(@"Please fill in all fields");
             }
-
-            MessageBox.Show(@"User registered");
-
-            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

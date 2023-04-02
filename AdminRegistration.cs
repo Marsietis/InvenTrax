@@ -12,26 +12,44 @@ namespace InvenTrax1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private bool CheckIfEmpty()
         {
-            string pathLogin = Path.Combine(
-                Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                "login.txt");
-
-            string[] lines = File.ReadAllLines(pathLogin);
-
-            for (int i = 0; i < lines.Length; i++)
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
-                string[] values = lines[i].Split(' ');
-
-                if (values[0] == "admin")
-                {
-                    lines[i] = "admin " + textBox1.Text + " " + textBox2.Text + " admin";
-                    break;
-                }
+                return true;
             }
 
-            File.WriteAllLines(pathLogin, lines);
+            return false;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CheckIfEmpty() == false)
+            {
+                string pathLogin = Path.Combine(
+                    Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
+                    "login.txt");
+
+                string[] lines = File.ReadAllLines(pathLogin);
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string[] values = lines[i].Split(' ');
+
+                    if (values[0] == "admin")
+                    {
+                        lines[i] = "admin " + textBox1.Text + " " + textBox2.Text + " admin";
+                        break;
+                    }
+                }
+
+                File.WriteAllLines(pathLogin, lines);
+            }
+            else
+            {
+                MessageBox.Show(@"Please fill in all fields");
+            }
         }
 
 

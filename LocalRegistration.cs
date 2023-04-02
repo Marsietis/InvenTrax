@@ -20,8 +20,25 @@ namespace InvenTrax1
             Close();
         }
 
+        private bool CheckIfEmpty()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (CheckIfEmpty())
+            {
+                MessageBox.Show(@"Please fill in all fields");
+                return;
+            }
+
             string pathLogin =
                 Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
                     "login.txt");

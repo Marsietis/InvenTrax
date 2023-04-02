@@ -42,27 +42,33 @@ namespace InvenTrax1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 382);
+            this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
+            this.button2.Location = new System.Drawing.Point(269, 403);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 67);
-            this.button2.TabIndex = 27;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(63, 382);
+            this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(63, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 67);
-            this.button1.TabIndex = 26;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(63, 249);
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.Window;
+            this.Password.Location = new System.Drawing.Point(63, 259);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(341, 35);
             this.Password.TabIndex = 23;
@@ -70,7 +76,9 @@ namespace InvenTrax1
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(63, 156);
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.ForeColor = System.Drawing.SystemColors.Window;
+            this.Username.Location = new System.Drawing.Point(63, 137);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(432, 35);
             this.Username.TabIndex = 22;
@@ -78,24 +86,28 @@ namespace InvenTrax1
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(63, 287);
+            this.textBox2.Location = new System.Drawing.Point(63, 308);
+            this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(397, 38);
-            this.textBox2.TabIndex = 21;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(63, 194);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(397, 38);
-            this.textBox1.TabIndex = 20;
+            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(63, 80);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(63, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 49);
+            this.label1.Size = new System.Drawing.Size(661, 83);
             this.label1.TabIndex = 19;
             this.label1.Text = "Register a new local user";
             // 
@@ -103,6 +115,7 @@ namespace InvenTrax1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1214, 890);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
