@@ -1,4 +1,0 @@
-admin admin admin admin
-local local local DefaultLocation
-user user user DefaultLocation
-local   

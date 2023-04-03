@@ -22,7 +22,7 @@ namespace InvenTrax1
         {
             string filePath = Path.Combine(
                 Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                "login.txt");
+                "login.csv");
 
             string[] lines = File.ReadAllLines(filePath);
 

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using static InvenTrax1.Encryption;
 
 namespace InvenTrax1
 {
@@ -23,7 +24,7 @@ namespace InvenTrax1
 
             string pathLogin = Path.Combine(
                 Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                "login.txt");
+                "login.csv");
 
             try
             {
@@ -45,6 +46,7 @@ namespace InvenTrax1
 
         private bool ButtonValidateLogin(string[] lines)
         {
+            string password = Encrypt(Password.Text);
             foreach (string line in lines)
             {
                 string[] values = line.Split(' ');
@@ -54,21 +56,21 @@ namespace InvenTrax1
                     continue;
                 }
 
-                if (values[0] == "admin" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "admin" && values[1] == Username.Text && values[2] == password)
                 {
                     Admin admin = new Admin();
                     admin.Show();
                     return true;
                 }
 
-                if (values[0] == "local" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "local" && values[1] == Username.Text && values[2] == password)
                 {
                     InvenTrax invenTrax = new InvenTrax(values[3]);
                     invenTrax.Show();
                     return true;
                 }
 
-                if (values[0] == "user" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "user" && values[1] == Username.Text && values[2] == password)
                 {
                     InvenTraxUser user = new InvenTraxUser(values[3]);
                     user.Show();
@@ -77,6 +79,17 @@ namespace InvenTrax1
             }
 
             return false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != this)
+                {
+                    form.Close();
+                }
+            }
         }
     }
 }

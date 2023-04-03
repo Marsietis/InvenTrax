@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using static InvenTrax1.Encryption;
 
 namespace InvenTrax1
 {
@@ -41,12 +42,14 @@ namespace InvenTrax1
 
             string pathLogin =
                 Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                    "login.txt");
+                    "login.csv");
+
+            string password = Encrypt(textBox2.Text);
 
             if (!File.Exists(pathLogin))
             {
                 File.WriteAllText(pathLogin,
-                    $@"user {textBox1.Text} {textBox2.Text} {_location}");
+                    $@"user {textBox1.Text} {password} {_location}");
             }
 
             else
@@ -56,7 +59,7 @@ namespace InvenTrax1
                 size++;
                 string[] newLines = new string[size];
                 for (int i = 0; i < size - 1; i++) newLines[i] = lines[i];
-                newLines[size - 1] = "user " + textBox1.Text + " " + textBox2.Text + " " + _location;
+                newLines[size - 1] = "user " + textBox1.Text + " " + password + " " + _location;
                 File.WriteAllLines(pathLogin, newLines);
             }
 

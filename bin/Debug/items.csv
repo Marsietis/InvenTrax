@@ -1,4 +1,5 @@
-DefaultLocation,laptop1,333,1000,does stuff; big battery,4
-DefaultLocation,phone,2222,54,asdasd,4
-OtherLocation,Item,666,500,asdasd; dadsad; adsad,3
-DefaultLocation,laptop,222,1000,does stuff; big battery,5
+DefaultLocation,laptop,111,999,Big Battery; 15inch display; Backlit keyboard,4
+DefaultLocation,phone,222,850,Waterproof; Multiple cameras,7
+OtherLocation,phone,222,840,Waterproof; Multiple cameras,1
+DefaultLocation,headphones,420,250,Wireless; White,1
+DefaultLocation,Keyboard,333,85,Mehcanical red switches; backlit,21

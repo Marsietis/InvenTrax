@@ -39,3 +39,4 @@ E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.Quantity.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.RemoveItem.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.EditItem.resources
 E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.AdminRegistration.resources
+E:\Programavimas\InvenTrax1\obj\Debug\InvenTrax1.LocalPasswordChange.resources

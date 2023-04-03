@@ -44,12 +44,13 @@ namespace InvenTrax1
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(50, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 88);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -75,11 +76,12 @@ namespace InvenTrax1
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(50, 369);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 58);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -95,6 +97,7 @@ namespace InvenTrax1
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(468, 231);
@@ -112,7 +115,7 @@ namespace InvenTrax1
             this.button4.Location = new System.Drawing.Point(258, 369);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 58);
-            this.button4.TabIndex = 6;
+            this.button4.TabIndex = 3;
             this.button4.Text = "-";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -124,16 +127,18 @@ namespace InvenTrax1
             this.button5.Location = new System.Drawing.Point(357, 369);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(70, 58);
-            this.button5.TabIndex = 7;
+            this.button5.TabIndex = 4;
             this.button5.Text = "+";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Quantity
             // 
+            this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(1888, 992);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

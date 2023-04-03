@@ -43,6 +43,7 @@ namespace InvenTrax1
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(269, 403);
             this.button2.Name = "button2";
@@ -55,6 +56,7 @@ namespace InvenTrax1
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(63, 403);
             this.button1.Name = "button1";
@@ -113,9 +115,11 @@ namespace InvenTrax1
             // 
             // LocalRegistration
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(1214, 890);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

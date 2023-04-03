@@ -104,5 +104,11 @@ namespace InvenTrax1
         {
             Application.Exit();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            LocalPasswordChange localpasswordchange = new LocalPasswordChange(_location);
+            localpasswordchange.Show();
+        }
     }
 }

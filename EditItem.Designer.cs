@@ -55,7 +55,7 @@ namespace InvenTrax1
             this.button3.Location = new System.Drawing.Point(466, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(230, 88);
-            this.button3.TabIndex = 9;
+            this.button3.TabIndex = 1;
             this.button3.Text = "List all items";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -75,7 +75,7 @@ namespace InvenTrax1
             this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(288, 38);
-            this.textBox1.TabIndex = 7;
+            this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
@@ -91,12 +91,14 @@ namespace InvenTrax1
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(83, 845);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 58);
-            this.button2.TabIndex = 10;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Change";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
@@ -114,7 +116,7 @@ namespace InvenTrax1
             this.textBox2.MaxLength = 20;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(347, 38);
-            this.textBox2.TabIndex = 12;
+            this.textBox2.TabIndex = 4;
             // 
             // label3
             // 
@@ -140,7 +142,7 @@ namespace InvenTrax1
             this.textBox3.MaxLength = 20;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(347, 38);
-            this.textBox3.TabIndex = 14;
+            this.textBox3.TabIndex = 5;
             // 
             // label5
             // 
@@ -157,17 +159,19 @@ namespace InvenTrax1
             this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(675, 312);
-            this.richTextBox1.TabIndex = 18;
+            this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.button4.ForeColor = System.Drawing.SystemColors.Window;
             this.button4.Location = new System.Drawing.Point(83, 271);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 58);
-            this.button4.TabIndex = 19;
+            this.button4.TabIndex = 3;
             this.button4.Text = "Enter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox4
@@ -176,7 +180,7 @@ namespace InvenTrax1
             this.textBox4.MaxLength = 10;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 38);
-            this.textBox4.TabIndex = 20;
+            this.textBox4.TabIndex = 6;
             // 
             // label6
             // 

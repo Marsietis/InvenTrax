@@ -52,17 +52,20 @@ namespace InvenTrax1
                 while ((line = reader.ReadLine()) != null)
                 {
                     string[] fields = line.Split(',');
-                    if (fields.Length >= 3 && fields[0] == _location && fields[2] == itemId)
+                    if (fields.Length >= 3 && fields[2] == itemId)
                     {
-                        itemExists = true;
-                        break;
+                        if (fields[1] != itemName || fields[0] == _location)
+                        {
+                            itemExists = true;
+                            break;
+                        }
                     }
                 }
             }
 
             if (itemExists)
             {
-                MessageBox.Show(@"An item with the same ID already exists in this location.");
+                MessageBox.Show(@"An item with the same ID already exists with a different name.");
             }
             else
             {
@@ -71,10 +74,11 @@ namespace InvenTrax1
                     writer.WriteLine(row);
                 }
 
-                MessageBox.Show(@"Items added");
+                MessageBox.Show(@"Item added");
                 Close();
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -32,8 +32,8 @@ namespace InvenTrax1
                 string properties = items[4];
                 string quantity = items[5];
                 string row =
-                    $"Name: {name}, ID: {id}, Price: {price} Eur, Properties: {properties}, Quantity: {quantity}";
-                if (location == _location && searchName == name || searchId == id)
+                    $"Location: {location}, Name: {name}, ID: {id}, Price: {price} Eur, Properties: {properties}, Quantity: {quantity}";
+                if (searchName == name || searchId == id)
                 {
                     foundItem = true;
                     listBox1.Items.Add(row);

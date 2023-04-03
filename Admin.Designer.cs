@@ -70,7 +70,7 @@ namespace InvenTrax1
             this.button2.Location = new System.Drawing.Point(542, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(345, 132);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 4;
             this.button2.Text = "SIGN OUT";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -110,7 +110,7 @@ namespace InvenTrax1
             this.button4.Location = new System.Drawing.Point(1260, 451);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(504, 239);
-            this.button4.TabIndex = 4;
+            this.button4.TabIndex = 3;
             this.button4.Text = "Change admin login";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
