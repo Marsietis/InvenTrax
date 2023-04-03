@@ -71,5 +71,10 @@ namespace InvenTrax1
             Quantity quantity = new Quantity(_location);
             quantity.Show();
         }
+
+        private void InvenTraxUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

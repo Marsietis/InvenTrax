@@ -14,8 +14,26 @@ namespace InvenTrax1
             _location = location;
         }
 
+        private bool CheckIfEmpty()
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" ||
+                richTextBox1.Text == "")
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (CheckIfEmpty())
+            {
+                MessageBox.Show(@"Please fill in all fields");
+                return;
+            }
+
             string itemName = textBox1.Text;
             string itemId = textBox2.Text;
             string itemPrice = textBox3.Text;
@@ -26,14 +44,41 @@ namespace InvenTrax1
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
 
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            // Check if an item with the same ID already exists in the location
+            bool itemExists = false;
+            using (StreamReader reader = new StreamReader(filePath))
             {
-                writer.WriteLine(row);
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] fields = line.Split(',');
+                    if (fields.Length >= 3 && fields[2] == itemId)
+                    {
+                        if (fields[1] != itemName || fields[0] == _location)
+                        {
+                            itemExists = true;
+                            break;
+                        }
+                    }
+                }
             }
 
-            MessageBox.Show(@"Items added");
-            Close();
+            if (itemExists)
+            {
+                MessageBox.Show(@"An item with the same ID already exists with a different name.");
+            }
+            else
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLine(row);
+                }
+
+                MessageBox.Show(@"Item added");
+                Close();
+            }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

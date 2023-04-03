@@ -28,5 +28,16 @@ namespace InvenTrax1
             Remove remove = new Remove();
             remove.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AdminRegistration reg = new AdminRegistration();
+            reg.Show();
+        }
+
+        private void Admin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

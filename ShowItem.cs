@@ -6,7 +6,7 @@ namespace InvenTrax1
 {
     public partial class ShowItem : Form
     {
-        private string _location;
+        private readonly string _location;
 
         public ShowItem(string location)
         {
@@ -25,6 +25,7 @@ namespace InvenTrax1
             listBox1.Items.Clear();
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "items.csv");
             string[] lines = File.ReadAllLines(filePath);
+            bool foundItems = false;
             foreach (string line in lines)
             {
                 string[] items = line.Split(',');
@@ -41,6 +42,7 @@ namespace InvenTrax1
                     if (location == _location)
                     {
                         listBox1.Items.Add(row);
+                        foundItems = true;
                     }
                 }
                 else if (radioButton2.Checked)
@@ -48,12 +50,19 @@ namespace InvenTrax1
                     if (location != _location)
                     {
                         listBox1.Items.Add(row);
+                        foundItems = true;
                     }
                 }
                 else if (radioButton3.Checked)
                 {
                     listBox1.Items.Add(row);
+                    foundItems = true;
                 }
+            }
+
+            if (!foundItems)
+            {
+                listBox1.Items.Add("No items found.");
             }
         }
     }

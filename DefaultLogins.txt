@@ -1,0 +1,3 @@
+Default admin login - username: admin password: admin
+Default local login - username: local password: local
+Default user login - username: user password: user

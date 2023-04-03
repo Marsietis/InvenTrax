@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using static InvenTrax1.Encryption;
 
 namespace InvenTrax1
 {
@@ -12,52 +13,83 @@ namespace InvenTrax1
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Password.Text))
+            {
+                MessageBox.Show(@"Please enter a valid username and password");
+                return;
+            }
+
             string pathLogin = Path.Combine(
                 Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty,
-                "login.txt");
+                "login.csv");
 
-            string[] lines = File.ReadAllLines(pathLogin);
+            try
+            {
+                string[] lines = File.ReadAllLines(pathLogin);
+                if (ButtonValidateLogin(lines))
+                {
+                    Hide(); //<-------- problem is here
+                }
+                else
+                {
+                    MessageBox.Show(@"Incorrect username or password");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            bool login = false;
+        private bool ButtonValidateLogin(string[] lines)
+        {
+            string password = Encrypt(Password.Text);
             foreach (string line in lines)
             {
                 string[] values = line.Split(' ');
 
-                if (values[0] == "admin" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values.Length != 4)
                 {
-                    login = true;
+                    continue;
+                }
+
+                if (values[0] == "admin" && values[1] == Username.Text && values[2] == password)
+                {
                     Admin admin = new Admin();
                     admin.Show();
-                    Hide();
+                    return true;
                 }
 
-                else if (values[0] == "local" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "local" && values[1] == Username.Text && values[2] == password)
                 {
-                    login = true;
                     InvenTrax invenTrax = new InvenTrax(values[3]);
                     invenTrax.Show();
-                    Hide();
+                    return true;
                 }
 
-                else if (values[0] == "user" && values[1] == Username.Text && values[2] == Password.Text)
+                if (values[0] == "user" && values[1] == Username.Text && values[2] == password)
                 {
-                    login = true;
                     InvenTraxUser user = new InvenTraxUser(values[3]);
                     user.Show();
-                    Hide();
+                    return true;
                 }
             }
 
-            if (login == false)
-            {
-                MessageBox.Show(@"Incorrect username or password");
-            }
+            return false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != this)
+                {
+                    form.Close();
+                }
+            }
         }
     }
 }
