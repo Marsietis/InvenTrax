@@ -4,9 +4,10 @@
 
 ### This is a Programming languages and object-oriented programming course task.
 
+Default logins: admin admin | local local | user user
+
 Task:
 
-'''
 Our company and its partners want to develop a system to manage goods.
 
 The number of partners is subject to change. This means that our company's IT administrator can add or drop certain partners. The partner company must appoint its own IT administrator or even several. Each of them must therefore be given the possibility to register or be given already generated login data.
@@ -29,4 +30,3 @@ We would like the app to notify our partner that their goods are running low whe
 The login GUI is at your discretion. There should be a User Name input, a Password input and corresponding buttons.
 
 Product search must be by product code or product name.
-'''
